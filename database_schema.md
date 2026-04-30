@@ -2,6 +2,20 @@
 
 Descrição da estrutura de persistência do ecossistema **Wild-E-Commerce**. A modelagem prioriza a integridade dos dados e a escalabilidade, utilizando tipos de dados que evitam arredondamentos imprecisos.
 
+## Dicionário de Dados
+
+### Tabela: PRODUCT
+
+| Campo | Tipo | Descrição |
+| :---: | :---: | :---: |
+|id | Integer | Chave primária (Primary Key) |
+| name | String | Nome do produto (Obrigatório conforme contrato)
+| sku | String | Stock Keeping Unit. Identificador único para logística (Obrigatório) |
+| slug | String | Identificador para URLs amigáveis (Ex: produto-x) |
+| price_cents | Integer | Valor em centavos. Regra: Proibido usar Float
+| stock_quantity | Integer | Saldo de estoque conforme definido no contrato da API
+| category_id | Integer | Chave Estrangeira (FK) conectando à tabela CATEGORY
+
 ## Diagrama ER (Mermaid)
 ```mermaid
 erDiagram
