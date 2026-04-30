@@ -10,9 +10,11 @@ erDiagram
         int id PK "Auto-incremento"
         string name "Nome do produto"
         string slug "URL amigável (único)"
+        string sku "Código único de inventário (Obrigatório)"
         string description "Texto longo/Markdown"
-        int price_cents "Preço em centavos (evita erros de float)"
-        int stock "Quantidade em estoque"
+        int price_cents "Preço em centavos"
+        int stock_quantity "Quantidade em estoque"
+        int category_id FK "Chave estrangeira para CATEGORY"
         datetime created_at "Data de criação UTC"
     }
     CATEGORY {
@@ -23,3 +25,5 @@ erDiagram
 
     style PRODUCT fill:#000,stroke:#fff,color:#fff
     style CATEGORY fill:#000,stroke:#fff,color:#fff
+
+    
