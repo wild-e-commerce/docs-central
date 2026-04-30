@@ -1,7 +1,7 @@
 
 # Documentação Central 
 
-Este repo serve como a fonte para a arquitetura, processos e decisões técnicas de todo o ecossistema **Wild-E-commerce** tendo como foco  principal a **aplicação de padrões de engenharia de software de alta fidelidade**.
+Este repo serve como a fonte para a arquitetura, processos e decisões técnicas de todo o ecossistema **Wild-E-Commerce** tendo como foco  principal a **aplicação de padrões de engenharia de software de alta fidelidade**.
 
 ## Índice de Documentação
 
