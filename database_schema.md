@@ -6,15 +6,16 @@ Descrição da estrutura de persistência do ecossistema **Wild-E-Commerce**. A 
 
 ### Tabela: PRODUCT
 
-| Campo | Tipo | Descrição |
-| :---: | :---: | :---: |
-|id | Integer | Chave primária (Primary Key) |
-| name | String | Nome do produto (Obrigatório conforme contrato)
-| sku | String | Stock Keeping Unit. Identificador único para logística (Obrigatório) |
-| slug | String | Identificador para URLs amigáveis (Ex: produto-x) |
-| price_cents | Integer | Valor em centavos. Regra: Proibido usar Float
-| stock_quantity | Integer | Saldo de estoque conforme definido no contrato da API
-| category_id | Integer | Chave Estrangeira (FK) conectando à tabela CATEGORY
+| Campo | Tipo | Obrigatório? | Descrição |
+| :---: | :---: | :---: | :---: |
+| id | Integer | Sim(PK) | Chave primária (Primary Key) |
+| name | String | Sim | Nome do produto (Obrigatório conforme contrato)
+| description | String | Não |Detalhes do Produto (Markdown)
+| price_cents | Integer | Sim | Valor em centavos. Regra: Proibido usar Float
+| stock_quantity | Integer | Sim | Saldo de estoque conforme definido no contrato da API
+| category_id | Integer | Sim(PK) | Chave Estrangeira (FK) conectando à tabela CATEGORY
+| sku | String | Sim | Stock Keeping Unit. Identificador único para logística (Obrigatório) |
+| slug | String | Sim | Identificador para URLs amigáveis (Ex: produto-x) |
 
 ## Diagrama ER (Mermaid)
 ```mermaid
