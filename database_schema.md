@@ -17,6 +17,8 @@ Descrição da estrutura de persistência do ecossistema **Wild-E-Commerce**. A 
 | sku | String | Sim | Stock Keeping Unit. Identificador único para logística (Obrigatório) |
 | slug | String | Sim | Identificador para URLs amigáveis (Ex: produto-x) |
 
+:warning: Tenho que consertar o diagrama antes de adicionar mais tabelas!
+
 ## Diagrama ER (Mermaid)
 ```mermaid
 erDiagram
