@@ -41,7 +41,7 @@ erDiagram
         string slug "URL amigável"
     }
     USER {
-        int id PK
+        int id PKCATEGORY
         string name
         string email
         string role
@@ -49,5 +49,5 @@ erDiagram
 
     style PRODUCT fill:#000,stroke:#fff,color:#fff
     style CATEGORY fill:#000,stroke:#fff,color:#fff
-
+    style USER fill:#000,stroke:#fff,color:#fff
     
