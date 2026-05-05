@@ -41,7 +41,7 @@ erDiagram
         string slug "URL amigável"
     }
     USER {
-        int id PKCATEGORY
+        int id PK
         string name
         string email
         string role
