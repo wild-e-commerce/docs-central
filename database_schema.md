@@ -8,12 +8,12 @@ Descrição da estrutura de persistência do ecossistema **Wild-E-Commerce**. A 
 
 | Campo | Tipo | Obrigatório? | Restrição | Descrição |
 | :---: | :---: | :---: | :---: | :---: |
-| id | Integer | Sim(PK) | Primary key | Chave primária (Primary Key) |
+| id | Integer | Sim | Primary key | Chave primária (Primary Key) |
 | name | String | Sim | | Nome do produto (Obrigatório conforme contrato)
 | description | String | Não | | Detalhes do Produto (Markdown)
 | price_cents | Integer | Sim | | Valor em centavos. Regra: Proibido usar Float
 | stock_quantity | Integer | Sim | | Saldo de estoque conforme definido no contrato da API
-| category_id | Integer | Sim(PK) | | Chave Estrangeira (FK) conectando à tabela CATEGORY
+| category_id | Integer | Sim | Foreign Key | Chave Estrangeira (FK) conectando à tabela CATEGORY
 | sku | String | Sim | Unique | Stock Keeping Unit. Identificador único para logística (Obrigatório) |
 | slug | String | Sim | Unique | Identificador para URLs amigáveis (Ex: produto-x) |
 
