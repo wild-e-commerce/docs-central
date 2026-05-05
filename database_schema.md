@@ -46,6 +46,18 @@ erDiagram
         string email
         string role
     }
+    ORDER {
+        int id PK
+        int user_id FK
+        string status "Ex: pending, paid, returned"
+        int total_cents
+        datetime created_at
+    }
+    FAVORITE {
+        int user_id FK
+        int product_id FK
+        datetime created_at
+    }
 
     style PRODUCT fill:#000,stroke:#fff,color:#fff
     style CATEGORY fill:#000,stroke:#fff,color:#fff
