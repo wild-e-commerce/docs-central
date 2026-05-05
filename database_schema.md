@@ -39,6 +39,13 @@ erDiagram
         string name
         string slug "URL amigável"
     }
+    USER {
+        int id PK
+        string name
+        string email
+        role
+    }
+
 
     style PRODUCT fill:#000,stroke:#fff,color:#fff
     style CATEGORY fill:#000,stroke:#fff,color:#fff
