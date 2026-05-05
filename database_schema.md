@@ -23,6 +23,7 @@ Descrição da estrutura de persistência do ecossistema **Wild-E-Commerce**. A 
 ```mermaid
 erDiagram
     CATEGORY ||--o{ PRODUCT : "contém"
+    USER ||--o{ PRODUCT : "favorita"
     PRODUCT {
         int id PK "Auto-incremento"
         string name "Nome do produto"
@@ -45,7 +46,6 @@ erDiagram
         string email
         role
     }
-
 
     style PRODUCT fill:#000,stroke:#fff,color:#fff
     style CATEGORY fill:#000,stroke:#fff,color:#fff
