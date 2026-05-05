@@ -44,7 +44,7 @@ erDiagram
         int id PK
         string name
         string email
-        role
+        string role
     }
 
     style PRODUCT fill:#000,stroke:#fff,color:#fff
