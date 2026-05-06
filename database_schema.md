@@ -36,7 +36,7 @@ Campo | Tipo | Obrigatório? | Restrição | Descrição
 
 ### Tabela: FAVORITE
 
-Campo,Tipo,Obrigatório?,Restrição,Descrição
+| Campo | Tipo | Obrigatório? | Restrição | Descrição
 | :---: |:---: |:---: |:---: | :---:
 | id | integer | Sim | Primary Key | Identificador único do pedido |
 | user_id | integer | Sim | Foreign Key | Quem realizou a compra |
