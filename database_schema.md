@@ -34,7 +34,7 @@ Campo | Tipo | Obrigatório? | Restrição | Descrição
 | product_id | integer | Sim | Foreign Key | ID do produto favoritado |
 | created_at | datetime | Sim | - | Data/hora em que foi favoritado |
 
-### Tabela: FAVORITE
+### Tabela: ORDER
 
 | Campo | Tipo | Obrigatório? | Restrição | Descrição
 | :---: |:---: |:---: |:---: | :---:
