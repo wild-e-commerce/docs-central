@@ -8,7 +8,7 @@ Descrição da estrutura de persistência do ecossistema **Wild-E-Commerce**. A 
 
 | Campo | Tipo | Obrigatório? | Restrição | Descrição |
 | :---: | :---: | :---: | :---: | :---: |
-| id | Integer | Sim | Primary key | Chave primária (Primary Key) |
+| id | Integer | Sim | Primary key | Chave primária |
 | name | String | Sim | | Nome do produto (Obrigatório conforme contrato)
 | description | String | Não | | Detalhes do Produto (Markdown)
 | price_cents | Integer | Sim | | Valor em centavos. Regra: Proibido usar Float
@@ -20,8 +20,8 @@ Descrição da estrutura de persistência do ecossistema **Wild-E-Commerce**. A 
 ### Tabela: CATEGORY
 
 | Campo | Tipo | Obrigatório? | Restrição | Descrição |
-| :---: |:---: |:---: |:---: |
-| :---: |:---: |:---: |:---: |
+| :---: |:---: |:---: |:---: | :---:
+| id |integer |Sim | Primary key | Chave Primária |
 
 :warning: Tenho que consertar o diagrama antes de adicionar mais tabelas!
 
