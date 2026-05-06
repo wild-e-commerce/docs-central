@@ -34,6 +34,16 @@ Campo | Tipo | Obrigatório? | Restrição | Descrição
 | product_id | integer | Sim | Foreign Key | ID do produto favoritado |
 | created_at | datetime | Sim | - | Data/hora em que foi favoritado |
 
+### Tabela: FAVORITE
+
+Campo,Tipo,Obrigatório?,Restrição,Descrição
+| :---: |:---: |:---: |:---: | :---:
+| id | integer | Sim | Primary Key | Identificador único do pedido |
+| user_id | integer | Sim | Foreign Key | Quem realizou a compra |
+| status | string | Sim | - | "Status atual (ex: 'paid', 'returned')" |
+| total_cents | integer | Sim | - | Valor total em centavos |
+| created_at | datetime | Sim | - | Data/hora da transação (UTC) |
+
 :warning: Tenho que consertar o diagrama antes de adicionar mais tabelas!
 
 ## Diagrama ER (Mermaid)
