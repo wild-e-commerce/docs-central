@@ -55,6 +55,15 @@ Campo | Tipo | Obrigatório? | Restrição | Descrição
 | total_cents | integer | Sim | - | Valor total em centavos |
 | created_at | datetime | Sim | - | Data/hora da transação (UTC) |
 
+### Tabela: ORDER_ITEM
+
+Campo,Tipo,Obrigatório?,Restrição,Descrição
+id,integer,Sim,PK,Identificador do item.
+order_id,integer,Sim,FK,Vínculo com a tabela ORDER.
+product_id,integer,Sim,FK,Vínculo com a tabela PRODUCT.
+quantity,integer,Sim,-,Quantidade comprada.
+unit_price_cents,integer,Sim,-,Preço unitário no momento da venda.
+
 :warning: Tenho que consertar o diagrama antes de adicionar mais tabelas!
 
 ## Diagrama ER (Mermaid)
