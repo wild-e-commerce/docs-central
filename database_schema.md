@@ -4,16 +4,27 @@ Descrição da estrutura de persistência do ecossistema **Wild-E-Commerce**. A 
 
 ## Dicionário de Dados
 
+### Tabela: CATEGORY
+
+| Campo | Tipo | Obrigatório? | Restrição | Descrição |
+| :---: |:---: |:---: |:---: | :---:
+| id | integer | Sim | Primary key | Identificador único de categoria |
+| name | string | Sim | Unique | Nome da categoria |
+| description | String | Não | - | Detalhes da categoria |
+| slug | string | Sim | Unique | Identificador para URLs amigáveis (Ex: categoria-x) |
+| parent_id | integer | Não | Foreign Key | Identificador de categoria pai (quando aplicável) |
+
+
 ### Tabela: PRODUCT
 
 | Campo | Tipo | Obrigatório? | Restrição | Descrição |
 | :---: | :---: | :---: | :---: | :---: |
 | id | Integer | Sim | Primary key | Chave primária |
-| name | String | Sim | | Nome do produto (Obrigatório conforme contrato)
-| description | String | Não | | Detalhes do Produto (Markdown)
-| price_cents | Integer | Sim | | Valor em centavos. Regra: Proibido usar Float
-| stock_quantity | Integer | Sim | | Saldo de estoque conforme definido no contrato da API
-| category_id | Integer | Sim | Foreign Key | Chave Estrangeira (FK) conectando à tabela CATEGORY
+| name | String | Sim | | Nome do produto |
+| description | String | Não | | Detalhes do Produto |
+| price_cents | Integer | Sim | | Valor em centavos. Regra: Proibido usar Float |
+| stock_quantity | Integer | Sim | | Saldo de estoque conforme definido no contrato da API |
+| category_id | Integer | Sim | Foreign Key | Chave Estrangeira (FK) conectando à tabela CATEGORY |
 | sku | String | Sim | Unique | Stock Keeping Unit. Identificador único para logística (Obrigatório) |
 | slug | String | Sim | Unique | Identificador para URLs amigáveis (Ex: produto-x) |
 
