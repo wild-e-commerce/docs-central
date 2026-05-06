@@ -19,20 +19,20 @@ Descrição da estrutura de persistência do ecossistema **Wild-E-Commerce**. A 
 
 | Campo | Tipo | Obrigatório? | Restrição | Descrição |
 | :---: | :---: | :---: | :---: | :---: |
-| id | Integer | Sim | Primary key | Chave primária |
-| name | String | Sim | | Nome do produto |
-| description | String | Não | | Detalhes do Produto |
-| price_cents | Integer | Sim | | Valor em centavos. Regra: Proibido usar Float |
-| stock_quantity | Integer | Sim | | Saldo de estoque conforme definido no contrato da API |
-| category_id | Integer | Sim | Foreign Key | Chave Estrangeira (FK) conectando à tabela CATEGORY |
-| sku | String | Sim | Unique | Stock Keeping Unit. Identificador único para logística (Obrigatório) |
-| slug | String | Sim | Unique | Identificador para URLs amigáveis (Ex: produto-x) |
+| id | integer | Sim | Primary key | Chave primária |
+| name |sString | Sim | | Nome do produto |
+| description | string | Não | | Detalhes do Produto |
+| price_cents | integer | Sim | | Valor em centavos. Regra: Proibido usar Float |
+| stock_quantity | integer | Sim | | Saldo de estoque conforme definido no contrato da API |
+| category_id | integer | Sim | Foreign Key | Chave Estrangeira (FK) conectando à tabela CATEGORY |
+| sku | string | Sim | Unique | Stock Keeping Unit. Identificador único para logística (Obrigatório) |
+| slug |string | Sim | Unique | Identificador para URLs amigáveis (Ex: produto-x) |
 
 ### Tabela: USER
 
 | Campo | Tipo | Obrigatório? | Restrição | Descrição |
 | :---: |:---: |:---: |:---: | :---: |
-| id | integer | Sim | Primary key | Identificador único do usuário |
+| id | integer | Sim | Pk | Identificador único do usuário |
 | name | string | Sim | - | Nome Completo do usuário |
 | email | string | Sim | Unique | E-mail (usado para login e notificações) |
 | role | string | Sim | - | "Papel no sistema (ex: 'admin', 'customer')" |
@@ -41,7 +41,7 @@ Descrição da estrutura de persistência do ecossistema **Wild-E-Commerce**. A 
 
 Campo | Tipo | Obrigatório? | Restrição | Descrição
 | :---: |:---: |:---: |:---: | :---: |
-| user_id | integer | Sim | Foreign Key | ID do usuário que favoritou |
+| user_id | integer | Sim | FK | ID do usuário que favoritou |
 | product_id | integer | Sim | Foreign Key | ID do produto favoritado |
 | created_at | datetime | Sim | - | Data/hora em que foi favoritado |
 
