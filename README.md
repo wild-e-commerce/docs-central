@@ -9,7 +9,7 @@ Este repo serve como a fonte para a arquitetura, processos e decisões técnicas
 
 *   **[Arquitetura de Sistemas](./architecture.md)**: Detalhamento da evolução do Monolito para Microsserviços.
 
-*   **[ADRs (Architecture Decision Records)](./adrs/)**: Registro de fatores motivadores de decisões técnicas.
+*   **[ADRs (Architecture Decision Records)](./ADRs.md/)**: Registro de fatores motivadores de decisões técnicas.
 
 ---
 
