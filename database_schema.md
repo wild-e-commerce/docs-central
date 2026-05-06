@@ -26,6 +26,14 @@ Descrição da estrutura de persistência do ecossistema **Wild-E-Commerce**. A 
 | email | string | Sim | Unique | E-mail (usado para login e notificações) |
 | role | string | Sim | - | "Papel no sistema (ex: 'admin', 'customer')" |
 
+### Tabela: FAVORITE
+
+Campo | Tipo | Obrigatório? | Restrição | Descrição
+| :---: |:---: |:---: |:---: | :---:
+| user_id | integer | Sim | Foreign Key | ID do usuário que favoritou |
+| product_id | integer | Sim | Foreign Key | ID do produto favoritado |
+| created_at | datetime | Sim | - | Data/hora em que foi favoritado |
+
 :warning: Tenho que consertar o diagrama antes de adicionar mais tabelas!
 
 ## Diagrama ER (Mermaid)
