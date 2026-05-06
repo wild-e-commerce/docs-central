@@ -31,7 +31,7 @@ Descrição da estrutura de persistência do ecossistema **Wild-E-Commerce**. A 
 ### Tabela: USER
 
 | Campo | Tipo | Obrigatório? | Restrição | Descrição |
-| :---: |:---: |:---: |:---: | :---:
+| :---: |:---: |:---: |:---: | :---: |
 | id | integer | Sim | Primary key | Identificador único do usuário |
 | name | string | Sim | - | Nome Completo do usuário |
 | email | string | Sim | Unique | E-mail (usado para login e notificações) |
@@ -40,7 +40,7 @@ Descrição da estrutura de persistência do ecossistema **Wild-E-Commerce**. A 
 ### Tabela: FAVORITE
 
 Campo | Tipo | Obrigatório? | Restrição | Descrição
-| :---: |:---: |:---: |:---: | :---:
+| :---: |:---: |:---: |:---: | :---: |
 | user_id | integer | Sim | Foreign Key | ID do usuário que favoritou |
 | product_id | integer | Sim | Foreign Key | ID do produto favoritado |
 | created_at | datetime | Sim | - | Data/hora em que foi favoritado |
@@ -48,7 +48,7 @@ Campo | Tipo | Obrigatório? | Restrição | Descrição
 ### Tabela: ORDER
 
 | Campo | Tipo | Obrigatório? | Restrição | Descrição
-| :---: |:---: |:---: |:---: | :---:
+| :---: |:---: |:---: |:---: | :---: |
 | id | integer | Sim | Primary Key | Identificador único do pedido |
 | user_id | integer | Sim | Foreign Key | Quem realizou a compra |
 | status | string | Sim | - | "Status atual (ex: 'paid', 'returned')" |
@@ -57,12 +57,13 @@ Campo | Tipo | Obrigatório? | Restrição | Descrição
 
 ### Tabela: ORDER_ITEM
 
-Campo,Tipo,Obrigatório?,Restrição,Descrição
-id,integer,Sim,PK,Identificador do item.
-order_id,integer,Sim,FK,Vínculo com a tabela ORDER.
-product_id,integer,Sim,FK,Vínculo com a tabela PRODUCT.
-quantity,integer,Sim,-,Quantidade comprada.
-unit_price_cents,integer,Sim,-,Preço unitário no momento da venda.
+| Campo | Tipo | Obrigatório? | Restrição | Descrição
+| :---: |:---: |:---: |:---: | :---: | 
+| id | integer | Sim | PK | Identificador do item |
+| order_id | integer | Sim | FK | Vínculo com a tabela ORDER |
+| product_id | integer | Sim | FK | Vínculo com a tabela PRODUCT |
+| quantity | integer | Sim | - | Quantidade comprada |
+| unit_price_cents | integer | Sim | - | Preço unitário no momento da venda |
 
 :warning: Tenho que consertar o diagrama antes de adicionar mais tabelas!
 
