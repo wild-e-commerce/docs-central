@@ -9,4 +9,5 @@
 | 7 | Wild-Fiscal | REST / Async,Gerar XML e PDF da nota fiscal |
 
 ⚠️ Depois da fase 1 a ordem de execução fica mais ou menos flexível (eu acho!)
+
 ⚠️ Fase 6 e 7 consistem em sistemas à parte passíveis de conexão via API
