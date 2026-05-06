@@ -17,11 +17,14 @@ Descrição da estrutura de persistência do ecossistema **Wild-E-Commerce**. A 
 | sku | String | Sim | Unique | Stock Keeping Unit. Identificador único para logística (Obrigatório) |
 | slug | String | Sim | Unique | Identificador para URLs amigáveis (Ex: produto-x) |
 
-### Tabela: CATEGORY
+### Tabela: USER
 
 | Campo | Tipo | Obrigatório? | Restrição | Descrição |
 | :---: |:---: |:---: |:---: | :---:
-| id |integer |Sim | Primary key | Chave Primária |
+| id | integer | Sim | Primary key | Identificador único do usuário |
+| name | string | Sim | - | Nome Completo do usuário |
+| email | string | Sim | Unique | E-mail (usado para login e notificações) |
+| role | string | Sim | - | "Papel no sistema (ex: 'admin', 'customer')" |
 
 :warning: Tenho que consertar o diagrama antes de adicionar mais tabelas!
 
