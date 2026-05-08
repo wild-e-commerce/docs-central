@@ -8,7 +8,7 @@ Descrição da estrutura de persistência do ecossistema **Wild-E-Commerce**. A 
 
 | Campo | Tipo | Obrigatório? | Restrição | Descrição |
 | :---: |:---: |:---: |:---: | :---:
-| id | integer | Sim | Primary key | Identificador único de categoria |
+| id | integer | Sim | PK | Identificador único de categoria |
 | name | string | Sim | Unique | Nome da categoria |
 | description | String | Não | - | Detalhes da categoria |
 | slug | string | Sim | Unique | Identificador para URLs amigáveis (Ex: categoria-x) |
@@ -19,7 +19,7 @@ Descrição da estrutura de persistência do ecossistema **Wild-E-Commerce**. A 
 
 | Campo | Tipo | Obrigatório? | Restrição | Descrição |
 | :---: | :---: | :---: | :---: | :---: |
-| id | integer | Sim | Primary key | Chave primária |
+| id | integer | Sim | PK | Chave primária |
 | name |sString | Sim | | Nome do produto |
 | description | string | Não | | Detalhes do Produto |
 | price_cents | integer | Sim | | Valor em centavos. Regra: Proibido usar Float |
@@ -32,7 +32,7 @@ Descrição da estrutura de persistência do ecossistema **Wild-E-Commerce**. A 
 
 | Campo | Tipo | Obrigatório? | Restrição | Descrição |
 | :---: |:---: |:---: |:---: | :---: |
-| id | integer | Sim | Pk | Identificador único do usuário |
+| id | integer | Sim | PK | Identificador único do usuário |
 | name | string | Sim | - | Nome Completo do usuário |
 | email | string | Sim | Unique | E-mail (usado para login e notificações) |
 | role | string | Sim | - | "Papel no sistema (ex: 'admin', 'customer')" |
@@ -49,7 +49,7 @@ Campo | Tipo | Obrigatório? | Restrição | Descrição
 
 | Campo | Tipo | Obrigatório? | Restrição | Descrição
 | :---: |:---: |:---: |:---: | :---: |
-| id | integer | Sim | Primary Key | Identificador único do pedido |
+| id | integer | Sim | PK | Identificador único do pedido |
 | user_id | integer | Sim | Foreign Key | Quem realizou a compra |
 | status | string | Sim | - | "Status atual (ex: 'paid', 'returned')" |
 | total_cents | integer | Sim | - | Valor total em centavos |
