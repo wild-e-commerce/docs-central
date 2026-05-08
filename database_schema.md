@@ -101,6 +101,13 @@ erDiagram
         int total_cents
         datetime created_at
     }
+    ORDER_ITEM {
+        int id PK
+        int order_id FK
+        int product_id
+        int quantity
+        int unit_price_cents
+    }
     FAVORITE {
         int user_id FK
         int product_id FK
