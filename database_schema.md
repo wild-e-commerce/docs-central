@@ -21,9 +21,9 @@ Descrição da estrutura de persistência do ecossistema **Wild-E-Commerce**. A 
 | :---: | :---: | :---: | :---: | :---: |
 | id | integer | Sim | PK | Chave primária |
 | name |sString | Sim | | Nome do produto |
-| description | string | Não | | Detalhes do Produto |
-| price_cents | integer | Sim | | Valor em centavos. Regra: Proibido usar Float |
-| stock_quantity | integer | Sim | | Saldo de estoque conforme definido no contrato da API |
+| description | string | Não | - | Detalhes do Produto |
+| price_cents | integer | Sim | - | Valor em centavos. Regra: Proibido usar Float |
+| stock_quantity | integer | Sim | - | Saldo de estoque conforme definido no contrato da API |
 | category_id | integer | Sim | Foreign Key | Chave Estrangeira (FK) conectando à tabela CATEGORY |
 | sku | string | Sim | Unique | Stock Keeping Unit. Identificador único para logística (Obrigatório) |
 | slug |string | Sim | Unique | Identificador para URLs amigáveis (Ex: produto-x) |
@@ -40,7 +40,7 @@ Descrição da estrutura de persistência do ecossistema **Wild-E-Commerce**. A 
 ### Tabela: FAVORITE
 
 Campo | Tipo | Obrigatório? | Restrição | Descrição
-| :---: |:---: |:---: |:---: | :---: |
+| :---: | :---: | :---: |:---: | :---: |
 | user_id | integer | Sim | FK | ID do usuário que favoritou |
 | product_id | integer | Sim | Foreign Key | ID do produto favoritado |
 | created_at | datetime | Sim | - | Data/hora em que foi favoritado |
@@ -48,7 +48,7 @@ Campo | Tipo | Obrigatório? | Restrição | Descrição
 ### Tabela: ORDER
 
 | Campo | Tipo | Obrigatório? | Restrição | Descrição
-| :---: |:---: |:---: |:---: | :---: |
+| :---: | :---: | :---: | :---: | :---: |
 | id | integer | Sim | PK | Identificador único do pedido |
 | user_id | integer | Sim | Foreign Key | Quem realizou a compra |
 | status | string | Sim | - | "Status atual (ex: 'paid', 'returned')" |
