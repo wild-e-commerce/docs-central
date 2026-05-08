@@ -12,7 +12,7 @@ Descrição da estrutura de persistência do ecossistema **Wild-E-Commerce**. A 
 | name | string | Sim | Unique | Nome da categoria |
 | description | String | Não | - | Detalhes da categoria |
 | slug | string | Sim | Unique | Identificador para URLs amigáveis (Ex: categoria-x) |
-| parent_id | integer | Não | Foreign Key | Identificador de categoria pai (quando aplicável) |
+| parent_id | integer | Não | FK | Identificador de categoria pai (quando aplicável) |
 
 
 ### Tabela: PRODUCT
@@ -24,7 +24,7 @@ Descrição da estrutura de persistência do ecossistema **Wild-E-Commerce**. A 
 | description | string | Não | - | Detalhes do Produto |
 | price_cents | integer | Sim | - | Valor em centavos. Regra: Proibido usar Float |
 | stock_quantity | integer | Sim | - | Saldo de estoque conforme definido no contrato da API |
-| category_id | integer | Sim | Foreign Key | Chave Estrangeira (FK) conectando à tabela CATEGORY |
+| category_id | integer | Sim | FK | Chave Estrangeira (FK) conectando à tabela CATEGORY |
 | sku | string | Sim | Unique | Stock Keeping Unit. Identificador único para logística (Obrigatório) |
 | slug |string | Sim | Unique | Identificador para URLs amigáveis (Ex: produto-x) |
 
@@ -42,7 +42,7 @@ Descrição da estrutura de persistência do ecossistema **Wild-E-Commerce**. A 
 Campo | Tipo | Obrigatório? | Restrição | Descrição
 | :---: | :---: | :---: |:---: | :---: |
 | user_id | integer | Sim | FK | ID do usuário que favoritou |
-| product_id | integer | Sim | Foreign Key | ID do produto favoritado |
+| product_id | integer | Sim | FK | ID do produto favoritado |
 | created_at | datetime | Sim | - | Data/hora em que foi favoritado |
 
 ### Tabela: ORDER
@@ -50,7 +50,7 @@ Campo | Tipo | Obrigatório? | Restrição | Descrição
 | Campo | Tipo | Obrigatório? | Restrição | Descrição
 | :---: | :---: | :---: | :---: | :---: |
 | id | integer | Sim | PK | Identificador único do pedido |
-| user_id | integer | Sim | Foreign Key | Quem realizou a compra |
+| user_id | integer | Sim | FK | Quem realizou a compra |
 | status | string | Sim | - | "Status atual (ex: 'paid', 'returned')" |
 | total_cents | integer | Sim | - | Valor total em centavos |
 | created_at | datetime | Sim | - | Data/hora da transação (UTC) |
