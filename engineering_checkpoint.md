@@ -8,7 +8,7 @@
 * **[⚠️ Lógica de Relacionamento:** Estrutura de subcategorias (`parent_id`) e vínculos entre produtos e categorias.
 * **[⚠️] Entidades Transacionais (Pendente/Limpeza):** Organizar as tabelas `ORDER` (cabeçalho) e `ORDER_ITEM` (imutabilidade de preço e quantidade).
 * **[⚠️] Entidades de Engajamento (Pendente/Limpeza):** Organizar a tabela `FAVORITE` (N:M entre User e Product).
-* **[❌] Bancos de Dados Externos (Pendente):** Modelar a base de dados isolada para o `WILD-PAY` (Transações) e `WILD-FISCAL` (Log de Notas).
+* **[⚠️] Bancos de Dados Externos (Pendente/Limpeza):** Modelar a base de dados isolada para o `WILD-PAY` (Transações) e `WILD-FISCAL` (Log de Notas).
 
 ### 2. Diagramas (Mermaid / Fluxo)
 A representação visual da arquitetura.
