@@ -44,7 +44,7 @@ Separar o **Wild-Pay** (Gateway) e o **Wild-Fiscal** (NFe) em serviços independ
 
 Com a decisão de adotar uma arquitetura de microsserviços poliglotas (ADR-002), surgiu a necessidade de definir como os bancos de dados e contratos de cada serviço seriam documentados. Manter tudo em um único dicionário de dados poderia induzir ao erro de acoplamento direto entre as bases (compartilhamento de tabelas).
 
-#### Decisão
+### Decisão
 
 Cada subsistema (**Wild-Pay**, **Wild-Fiscal**) terá sua própria especificação técnica em arquivos separados no `docs-central`.
 
