@@ -17,6 +17,15 @@ Campo | Tipo | Obrigatório? | Restrição | Descrição |
 | gateway_response | JSON | Não | - | Resposta bruta do processador (mock) |
 | created_at | datetime | Sim | - | Registro de criação |
 
+Campo,Tipo,Obrigatório?,Restrição,Descrição
+id,integer,Sim,PK,Identificador interno.
+order_id,integer,Sim,Index/UK,Referência do Core.
+invoice_number,string,Não,Unique,Gerado após emissão.
+access_key,string,Não,Unique,Chave de 44 dígitos (mock).
+xml_content,text,Não,-,Conteúdo da nota (mock).
+status,string,Sim,-,"processing, issued, error."
+issued_at,datetime,Não,-,Data da autorização.
+
 ⚠️ Copiei e colei do wild_pay então ficou duplicado
 
 ## Diagrama ER 
