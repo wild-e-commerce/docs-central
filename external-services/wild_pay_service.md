@@ -18,10 +18,10 @@ Diferente do Core, aqui serão usados UUIDs para os IDs das transações para au
 | gateway_response | JSON | Não | - | Resposta bruta do processador (mock) |
 | created_at | datetime | Sim | - | Registro de criação |
 
-## Diagrama ER (Mermaid)
+## Diagrama ER 
 ```mermaid
 erDiagram
-    PRODUCT {
+    PAYMENT_TRANSACTION {
         int uuid PK "Auto-incremento"
         string external_order_ref "ID do pedido vindo do Wild-E-commerce"
         int amount_cents "Valor total em centavos"
@@ -32,5 +32,5 @@ erDiagram
         datetime created_at "Registro de criação"
         
         }
-    style PRODUCT fill:#000,stroke:#fff,color:#fff
+    style PAYMENT_TRANSACTION fill:#000,stroke:#fff,color:#fff
     
