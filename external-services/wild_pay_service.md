@@ -11,7 +11,7 @@ Diferente do Core, aqui serão usados UUIDs para os IDs das transações para au
 | :---: |:---: |:---: |:---: | :---:
 | id | UUID | Sim | PK | ID único da transação financeira |
 | external_order_ref | string | Sim | Index | O ID do pedido vindo do Wild-E-commerce |
-| amount_cents | integer | Sim | - |Valor total em centavos |
+| amount_cents | integer | Sim | - | Valor total em centavos |
 | currency | string | Sim | - | Código da moeda (ex: 'BRL') |
 | method | string | Sim | - | "'credit_card' | 'pix', 'boleto'." |
 | status | string | Sim |- | "pending, authorized, captured, failed, refunded." |
@@ -21,51 +21,16 @@ Diferente do Core, aqui serão usados UUIDs para os IDs das transações para au
 ## Diagrama ER (Mermaid)
 ```mermaid
 erDiagram
-    CATEGORY ||--o{ PRODUCT : "contém"
-    USER ||--o{ PRODUCT : "favorita"
     PRODUCT {
-        int id PK "Auto-incremento"
-        string name "Nome do produto"
-        string slug "URL amigável (único)"
-        string sku "Código único de inventário (Obrigatório)"
-        string description "Texto longo/Markdown"
-        int price_cents "Preço em centavos"
-        int stock_quantity "Quantidade em estoque"
-        int category_id FK "Chave estrangeira para CATEGORY"
-        datetime created_at "Data de criação UTC"
-    }
-    CATEGORY {
-        int id PK
-        string name
-        string slug "URL amigável"
-    }
-    USER {
-        int id PK
-        string name
-        string email
-        string role
-    }
-    ORDER {
-        int id PK
-        int user_id FK
-        string status "Ex: pending, paid, returned"
-        int total_cents
-        datetime created_at
-    }
-    ORDER_ITEM {
-        int id PK
-        int order_id FK
-        int product_id
-        int quantity
-        int unit_price_cents
-    }
-    FAVORITE {
-        int user_id FK
-        int product_id FK
-        datetime created_at
-    }
-
+        int uuid PK "Auto-incremento"
+        string external_order_ref "ID do pedido vindo do Wild-E-commerce"
+        int amount_cents "Valor total em centavos"
+        string currency  "Código da moeda (ex: 'BRL')"
+        string method "'credit_card' | 'pix', 'boleto'."
+        string status "pending, authorized, captured, failed, refunded." 
+        json gateway_response "Resposta bruta do processador (mock)"
+        datetime created_at "Registro de criação"
+        
+        }
     style PRODUCT fill:#000,stroke:#fff,color:#fff
-    style CATEGORY fill:#000,stroke:#fff,color:#fff
-    style USER fill:#000,stroke:#fff,color:#fff
     
