@@ -4,7 +4,7 @@ Descrição da estrutura de persistência do serviço **Wild-Fiscal** que lida c
 
 ## Dicionário de Dados
 
-### Tabela: INVOICE_LOGS
+### Tabela: INVOICE_LOG
 
 Campo | Tipo | Obrigatório? | Restrição | Descrição |
 | :---: |:---: |:---: |:---: | :---:
@@ -31,7 +31,7 @@ issued_at,datetime,Não,-,Data da autorização.
 ## Diagrama ER 
 ```mermaid
 erDiagram
-    INVOICE_LOGS {
+    INVOICE_LOG {
         int uuid PK "Auto-incremento"
         string external_order_ref "ID do pedido vindo do Wild-E-commerce"
         int amount_cents "Valor total em centavos"
